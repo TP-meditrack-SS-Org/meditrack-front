@@ -38,12 +38,12 @@ jobs:
 
       - name: Inject production API URL
         run: |
-          @'
+          cat <<EOF > src/environments/environment.ts
           export const environment = {
             production: true,
             apiUrl: '${{ vars.FRONT_API_URL }}'
           };
-          '@ | Set-Content src/environments/environment.ts
+          EOF
 
       - name: Build Angular app
         run: npx ng build --base-href "${{ steps.pages.outputs.base_path }}/"
