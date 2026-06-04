@@ -17,4 +17,4 @@ jobs:
     uses: TP-meditrack-SS-Org/shared-workflow-ci/.github/workflows/ci-express.yml@main
     with:
       node-version: ${{ matrix.node-version }}
-      test-command: npm test:ci
+      test-command: npm run test:ci
