@@ -27,7 +27,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/meditrack-front/",
               "budgets": [
                 {
                   "type": "initial",
